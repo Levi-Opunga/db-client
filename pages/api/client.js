@@ -14,6 +14,10 @@ export const allUsers = () =>
     fetch("http://localhost:8081/api/users/all").then((response) =>
         response.json()
     );
+export const oneUser = (id) =>
+    fetch(`http://localhost:8081/api/users/one/${id}`).then((response) =>
+        response.json()
+    );
 
 export const deleteUsers = (id) => fetch(`http://localhost:8081/api/users/delete/${id}`, {
     method: "DELETE"
@@ -41,7 +45,17 @@ export const create = (data) =>
             "Content-Type": "application/json",
             // 'Content-Type': 'application/x-www-form-urlencoded',
         },
-        redirect: "follow",
+        referrerPolicy: "no-referrer",
+        body: JSON.stringify(data),
+    }).then((response) => response.json());
+
+export const editUser = (data) =>
+    fetch("http://localhost:8081/api/users/update", {
+        method: "POST", // *GET, POST, PUT, DELETE, etc.
+        headers: {
+            "Content-Type": "application/json",
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+        },
         referrerPolicy: "no-referrer",
         body: JSON.stringify(data),
     }).then((response) => response.json());

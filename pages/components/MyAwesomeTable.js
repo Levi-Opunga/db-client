@@ -166,17 +166,17 @@ export default function CustomizedTables(props) {
                                 <StyledTableCell align="right">{row.website}</StyledTableCell>
                                 {currentUser.admin ?   <StyledTableCell align="right">
                                     <ul style={{margin: -11, padding: 0, listStyleType: 0}}>
-                                        <ul style={{margin: 0, padding: 0}}>
-                                            <Button
-                                                size="small"
-                                                type="submit"
-                                                width="auto"
-                                                variant="contained"
-                                                sx={{mt: 0, mb: 1, pt: 0, pb: 0}}
-                                            >
-                                                Update{" "}
-                                            </Button>
-                                        </ul>
+                                        {/*<ul style={{margin: 0, padding: 0}}>*/}
+                                        {/*    <Button*/}
+                                        {/*        size="small"*/}
+                                        {/*        type="submit"*/}
+                                        {/*        width="auto"*/}
+                                        {/*        variant="contained"*/}
+                                        {/*        sx={{mt: 0, mb: 1, pt: 0, pb: 0}}*/}
+                                        {/*    >*/}
+                                        {/*        Update{" "}*/}
+                                        {/*    </Button>*/}
+                                        {/*</ul>*/}
                                         <ul style={{margin: 0, padding: 0}}>
                                             <Button
                                                 id={row.id}

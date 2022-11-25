@@ -18,17 +18,21 @@ export function Layout({ children }) {
   return (
     <main style={{ display: "flex", height: "100%" }}>
       <Sidebar>
-        <Menu>
-          <Link href="/homepage">
-            <MenuItem>Home</MenuItem>
-          </Link>
-          <Link href="/addcontact">
-            <MenuItem>Add Contact</MenuItem>
-          </Link>
-          <Link href="/users">
-            <MenuItem>Users</MenuItem>
-          </Link>
-        </Menu>
+          <Menu>
+              <Link href="/homepage">
+                  <MenuItem>Home</MenuItem>
+              </Link>
+              <Link href="/addcontact">
+                  <MenuItem>Add Contact</MenuItem>
+              </Link>
+              <Link href="/users">
+                  <MenuItem>Users</MenuItem>
+              </Link>
+
+              <Link href="/create">
+                  <MenuItem>Create User</MenuItem>
+              </Link>
+          </Menu>
       </Sidebar>
       <main>
         {/* <button onClick={() => collapseSidebar()}>Collapse</button> */}
